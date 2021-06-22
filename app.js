@@ -46,6 +46,9 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("Connected to Mongo...."))
+  .then(() => {
+  console.log("Connected to Mongo....")
+  app.listen(8000); 
+})
   .catch((error) => console.log(error.message));
 module.exports = app;
